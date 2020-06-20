@@ -1,0 +1,26 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    ["babel-plugin-styled-components"],
+    ["babel-plugin-transform-imports", {
+      "@material-ui/core": {
+        // use "transform: '@material-ui/core/${member}'," if your bundler does not support ES modules
+        "transform": "@material-ui/core/${member}",
+        "preventFullImport": true
+      },
+      "@material-ui/icons": {
+        // use "transform: '@material-ui/icons/${member}'," if your bundler does not support ES modules
+        "transform": "@material-ui/icons/${member}",
+        "preventFullImport": true
+      }
+    }],
+    ["module-resolver", {
+      "root": ["."],
+      "alias": {
+        "@components": "./src/components/",
+        "@theme": "./src/theme/",
+        "@utils": "./src/utils/"
+      }
+    }]
+  ]
+}
