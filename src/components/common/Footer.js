@@ -13,10 +13,18 @@ const StyledTypography = styled(Typography)`
 `;
 
 const Footer = () => {
+  const date = new Date();
+  const thisYear = date.getFullYear();
   return (
     <>
       <Divider />
-      <StyledTypography variant="subtitle2" align="center">© 2020 Rlidea, Inc. All rights reserved</StyledTypography>
+      <StyledTypography variant="subtitle2" align="center">
+        ©
+        {thisYear}
+        {' '}
+        {process.env.COMPANY_NAME}
+        , Inc. All rights reserved
+      </StyledTypography>
     </>
   );
 };

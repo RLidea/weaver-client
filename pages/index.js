@@ -10,8 +10,12 @@ const Home = () => {
   return (
     <Wrapper container direction="column">
       <Grid item xs container direction="column" alignItems="center">
-        <img src="/rlidea_logo.png" alt="logo" />
-        <Typography variant="h3">Hello, Weaver!</Typography>
+        <img src="/logo.png" alt="logo" />
+        <Typography variant="h3">
+          Hello,
+          {process.env.APP_NAME}
+          !
+        </Typography>
       </Grid>
       <Footer />
     </Wrapper>
